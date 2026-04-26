@@ -1,0 +1,322 @@
+/*01001000 01101111 01101100 00100000 01110110 01100001 01101110 01101110 01100001 01101011 00100000 01100001 00100000 01110011 01111010 01101001 01101110 01101011 01101111 01100100 01101111 01101011 00111111 00111111 00111111 00100000 01001101 01101001 00100000 01100001 01111010 00100000 01101000 01101111 01100111 01111001 00100000 01100101 01101100 01110100 01100101 01110010 01101000 01100101 01110100 00100000 01100100 01100101 00100000 01110011 01111010 01101001 01101110 01101011 01101111 01100100 01101111 01101011 01100001 01110100 00100000 01101110 01100101 01101101 00100000 01101011 01100001 01110000 01110101 01101110 01101011 00111111 00111111*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+/* 01001101 01101001 01100101 01110010 01110100 00111111 */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #010f3f, #111827);
+    color: #F3F4F6;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.page-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "nav nav nav"
+        "head head head"
+        "content content content"
+        "foot foot foot";
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 1rem;
+    height: auto;
+}
+
+
+/* 01001000 01101111 01100111 01111001 00100000 01100001 01111010 00100000 01100001 00100000 01110010 01101111 01101000 01100001 01100100 01110100 00100000 01100101 01100111 01111001 01110011 01101111 01110010 01101111 01110011 00100000 01101101 01100101 01101110 01110101 00101100 00100000 01101110 01100101 01101101 00100000 01100001 01101011 01100001 01110010 01110100 00100000 01110011 01100101 01101000 01101111 01100111 01111001 01110011 01100101 00100000 01100101 01100111 01111001 01110011 01101111 01110010 01100010 01100001 00100000 01101011 01100101 01110010 01110101 01101100 01101110 01101001 00101100 00100000 01110110 01100101 01100111 01110101 01101100 00100000 01101001 01101110 01101110 01100101 01101110 00100000 01110110 01100001 01101110 00100000 01101101 01100101 01100111 00100000 01101000 01101111 01100111 01111001 01100001 01101110 00100000 01101011 01100101 01101100 01101100 01100101 01101110 01100101 00100000 01100101 01111010 01110100 00111010 00001101 00001010 01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01110011 01110100 01100001 01100011 01101011 01101111 01110110 01100101 01110010 01100110 01101100 01101111 01110111 00101110 01100011 01101111 01101101 00101111 01110001 01110101 01100101 01110011 01110100 01101001 01101111 01101110 01110011 00101111 00110100 00110110 00110101 00110011 00110010 00110010 00111001 00101111 01100011 01110011 01110011 00101101 01100100 01101001 01110011 01110000 01101100 01100001 01111001 00101101 01110100 01110111 01101111 00101101 01110100 01100101 01111000 01110100 00101101 01100010 01101100 01101111 01100011 01101011 01110011 00101101 01101111 01101110 00101101 01110100 01101000 01100101 00101101 01110011 01100001 01101101 01100101 00101101 01101100 01101001 01101110 01100101*/
+
+.menu {
+    padding: 0.75rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+nav {
+    grid-area: nav;
+    border: #0B1020 1px solid;
+    align-items: center;
+
+    padding: 0;
+
+}
+
+/*01001101 01101001 01101011 01101111 01110010 00100000 01100101 01100111 01111001 00100000 01100001 01110001 01110101 01100001 00100000 01110011 01111010 01101001 01101110 00100000 01100110 01100101 01101100 01100101 01110100 00100000 01101011 01100101 01110010 01100101 01110011 01110100 01100101 01101101 00100000 01100101 01111010 01110100 00100000 01110100 01100001 01101100 01100001 01101100 01110100 01100001 01101101 00111010 00100000 01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01110111 01110111 01110111 00101110 01100001 01110001 01110101 01100001 01100011 01101111 01101100 01101111 01110010 01110011 00101110 01100101 01110101 00101111*/
+
+nav .logo {
+    float: left;
+    color: #87CEEB;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+    user-select: none;
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    user-select: none;
+}
+
+
+nav ul li {
+    display: inline-block;
+    background-color: #fdfdfd11;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    max-height: 3rem;
+    transition: 0.1s ease;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    transform: scale(1.05);
+}
+
+nav ul {
+    display: flex;
+    text-align: end;
+    align-items: center;
+    font-size: 0.8rem;
+    float: inline-end;
+    max-width: fit-content;
+    text-align: end;
+    gap: 1rem;
+    list-style-type: none;
+
+}
+
+header {
+    grid-area: head;
+    background: linear-gradient(90deg, #2563EB, #7C3AED);
+    height: max-content;
+    font-size: 1rem;
+}
+header a {
+    transition: 0.1s ease;
+
+}
+
+header a:hover{
+    transform: scale(1.05);
+}
+
+aside {
+    color: #87CEEB;
+   
+}
+
+aside h2 {
+    margin-bottom: 1rem;
+}
+
+aside ul {
+    display: grid;
+    font-size: 0.85rem;
+    list-style: none;
+    gap: 1rem;
+    user-select: none;
+}
+
+aside ul li:hover{
+    transform: scale(1.05);
+}
+
+aside ul li {
+    background: #ffffff0e;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: 0.1s ease;
+    cursor: pointer;
+}
+
+aside a {
+    text-decoration: none;
+    color: white;
+
+
+
+}
+
+    .bento-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 140px);
+        gap: 1rem;
+        grid-template-areas: 
+            "a a b c"
+            "a a d d"
+            "e f d d"
+            "g h h h";
+    }
+
+    .img-container:nth-child(1){
+        grid-area: a;
+    }
+    .img-container:nth-child(2){
+        grid-area: b;
+    }
+    .img-container:nth-child(3){
+        grid-area: c;
+    }
+    .img-container:nth-child(4){
+        grid-area: d;
+    }
+    .img-container:nth-child(5){
+        grid-area: e;
+    }
+    .img-container:nth-child(6){
+        grid-area: f;
+    }
+    .img-container:nth-child(7){
+        grid-area: g;
+    }
+    .img-container:nth-child(8){
+        grid-area: h;
+    }
+
+    
+
+
+
+
+
+
+.img-container img{
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    object-fit: cover;
+    border-radius: 1rem;
+   
+
+}
+.img-container {
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden; /* Keeps the rounded corners of the image if applicable */
+    border-radius: 12px; /* Matching the UI design */
+     cursor: pointer;
+     transition: 0.1s ease ; 
+}
+
+.img-container:hover{
+    transform: scale(1.05);
+}
+
+.tagBg {
+   
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); 
+
+    padding: 1.5rem 1rem 1rem 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+span{
+    display: inline-block;
+   background: #2563EB;
+   width: max-content;
+   padding: 0.5rem;
+   font-size: 1rem;
+   border-radius: 2rem;
+}
+
+
+
+.tags-wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.hero-content:first-child {
+    margin: 1rem 0;
+}
+
+.hero-content {
+
+    display: grid;
+    gap: 1rem;
+    max-width: 60%;
+}
+
+.hero-content a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #111827;
+    max-width: max-content;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+}
+
+main{
+    display: flexbox;
+}
+
+
+
+
+header,
+aside,
+article,
+nav,
+footer {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgb(0, 0, 0, 35%);
+    border: 1px solid rgba(255, 255, 255, 0.048);
+}
+
+.content-layout {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+
+}
+
+footer {
+    grid-area: foot;
+    text-align: center;
+    background: #0B1020;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+/* 01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01111001 01101111 01110101 01110100 01110101 00101110 01100010 01100101 00101111 01100101 01100100 01111000 01101100 01100111 01111001 00110111 01111010 01100111 01010110 01010001 00111111 01110011 01101001 00111101 00110000 01110101 01010010 00110000 01111000 01011010 01100001 00101101 01110010 01000011 01001100 01000101 01101011 01011111 01110000 01010011 */
